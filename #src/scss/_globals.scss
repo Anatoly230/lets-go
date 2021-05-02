@@ -1,0 +1,81 @@
+/*colors start*/
+
+$base-white: #fff;
+$base-black: #000;
+$menu-color: brown;
+body {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 18px;
+    color: $base-black;
+    background-color: $base-white;
+    margin: 0;
+    padding: 0;
+    line-height: 120%;
+    font-weight: 400;
+    height: 100vh;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/*colors end*/
+
+%wrapper-960 {
+    width: 960;
+    margin: 0 auto;
+}
+
+@mixin wrapper($wr-width) {
+    width: $wr-width;
+    margin: 0 auto;
+}
+
+@mixin list-reset() {
+    list-style: none;
+    padding: 0;
+}
+
+@mixin block-style($minw, $maxw, $minh, $maxh) {
+    min-width: $minw;
+    max-width: $maxw;
+    min-height: $minh;
+    max-height: $maxh;
+    overflow: hidden;
+}
+
+@mixin font-style($fs, $fw) {
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: 120%;
+}
+
+.main__section-heading {
+    @include font-style(30px, 700);
+    @include block-style( min-content, 500px, min-content, 65px);
+    padding: 10px;
+}
