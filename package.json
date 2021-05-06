@@ -4,7 +4,8 @@
     "description": "первый  gulpfile",
     "main": "index.html",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "editorconfig": "editorconfig-checker",
+        "test": "npm run editorconfig"
     },
     "repository": {
         "type": "git",
@@ -19,6 +20,7 @@
     "devDependencies": {
         "autoprefixer": "^10.2.5",
         "del": "^6.0.0",
+        "editorconfig-checker": "^4.0.2",
         "gulp": "^4.0.2",
         "gulp-autoprefixer": "^7.0.1",
         "gulp-clean-css": "^4.3.0",

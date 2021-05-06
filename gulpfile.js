@@ -122,7 +122,6 @@ const styles = () => {
         .pipe(rename('styles.min.css')) /*переименование результата (это уже отдельный файл)*/
         .pipe(sourcemap.write('.')) /*сохраняет карту css кода, чтобы проблему было легко найти в исходнике scs или less*/
         .pipe(dest(path.build.css))
-        .pipe(browserSync.stream())
 }
 
 const scripts = () => {
@@ -147,7 +146,7 @@ const cleanProjDir = () => {
 }
 
 const startwatch = () => {
-    watch(path.watch.css, styles)
+    watch(path.watch.css, styles).on('change', browserSync.reload)
     watch(path.watch.html, html)
     watch(path.watch.js, scripts)
     watch(path.watch.img, images)
