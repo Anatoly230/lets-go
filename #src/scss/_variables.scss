@@ -1,0 +1,54 @@
+/*colors start*/
+
+$base-white: #fff;
+$base-black: #000;
+$base-grey: #ccc;
+$base-blue: rgba(22, 28, 53, 1);
+
+/*transparent color*/
+
+$sp-orange: #FF8D30;
+$sp-orange-hover: #F26926;
+$sp-yellow-dark: #FFBD30;
+$base-yellow: #FFD74B;
+
+/*colors end*/
+
+
+/*media widths start*/
+
+$tablet: 768;
+$tablet-px:$tablet#{px};
+$mobile: 375;
+$mobile-px: $mobile#{px};
+
+/*media widths start*/
+
+
+/*font-info start*/
+
+
+/*font-info end*/
+
+$base-fs: 16;
+$mainFontSize: 20;
+$page-fs: $mainFontSize / $base-fs#{em};
+$promo-fs: 8+$base-fs;
+
+/* base font size*/
+
+$base-lh-value: 1.2;
+$base-lh: $base-lh-value#{em};
+
+/*base line-height*/
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+/*sizes start*/
+
+$desk-w: 1360;
+$desk-pro: ($desk-w / 1600)*100%;
+$desk-w-px: $desk-w#{px};

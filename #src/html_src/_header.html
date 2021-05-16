@@ -1,41 +1,48 @@
-<header class="page__header">
-    <a href="#" class="page__header-logo logo">
-        <img class="logo__pic" src="img/lets-go-logo.png" width="200" height="52" alt="Логотип компании `Погнали?`">
-    </a>
-    <button class="page__header-close open-close-btn" aria-label="закрыть меню"></button>
-    <nav class="page__header-nav">
-        <ul class="page__header-nav-menu menu">
-            <li class="menu__item">
-                <a class="menu__item-link" href="#">о сервисе</a>
+<header class="page__header header">
+    <div class="header__wrapper">
+
+        <nav class="header__nav">
+            <a href="#" class="header__logo logo">
+                <img class="logo__pic logo-hide" src="img/lets-go-logo.png" width="200" height="52" alt="Логотип компании `Погнали?`">
+                <img class="logo__pic-scroll" src="img/lets-go-logo-scroll.png" width="200" height="52" alt="Логотип компании `Погнали?`">
+            </a>
+            <button class="header-close open-close-btn--desktop" aria-label="закрыть меню"></button>
+            <span class="header__nav-dash"></span>
+            <ul class="header__nav-menu menu">
+                <li class="menu__item">
+                    <a class="menu__item-link @@if(link==1){_active}" href="#">о сервисе</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__item-link" href="#">направления</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__item-link" href="#">попутчики</a>
+                </li>
+            </ul>
+        </nav>
+
+        <ul class="header__quick-action quick-action">
+            <li class="quick-action__item">
+                <a class="quick-action__item-link quick-action__tel" href="tel:+78005558628" aria-label="8 800 555-86-28"></a>
             </li>
-            <li class="menu__item">
-                <a class="menu__item-link" href="#">направления</a>
+            <li class="quick-action__item">
+                <a class="quick-action__item-link quick-action__mail" href="mailto:maximos225@mail.ru" aria-label="mail@htmlacademy.ru"></a>
             </li>
-            <li class="menu__item">
-                <a class="menu__item-link" href="#">попутчики</a>
+            <li class="quick-action__item">
+                <a class="quick-action__item-link quick-action__log-in" href="#" aria-label="авторизация">авторизация</a>
             </li>
         </ul>
-    </nav>
-    <a class="page__header-sign-link" href="#">авторизация</a>
-    <ul class="page__header-contacts contacts">
-        <li class="contacts__item">
-            <a class="contacts__item-link" href="tel:+78005558628">8 800 555-86-28</a>
-        </li>
-        <li class="contacts__item">
-            <a class="contacts__item-link" href="mailto:maximos225@mail.ru">mail@htmlacademy.ru</a>
-        </li>
-    </ul>
+        <ul class="header-social social--desktop">
+            <li class="social__item">
+                <a class="social__link social__link--header" href="#">facebook</a>
+            </li>
+            <li class="social__item">
+                <a class="social__link social__link--header" href="#">vkontante</a>
 
-    <ul class="page__header-social social">
-        <li class="social__item">
-            <a class="social__link social__link--header" href="#">facebook</a>
-        </li>
-        <li class="social__item">
-            <a class="social__link social__link--header" href="#">vkontante</a>
-        </li>
-        <li class="social__item">
-            <a class="social__link  social__link--header" href="#">instaram</a>
-        </li>
-    </ul>
-
+            </li>
+            <li class="social__item">
+                <a class="social__link  social__link--header" href="#">instaram</a>
+            </li>
+        </ul>
+    </div>
 </header>

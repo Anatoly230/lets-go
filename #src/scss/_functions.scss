@@ -1,0 +1,9 @@
+/*Размер шрифта в относительных еденицах измерения - просто забиваю нужный размер шрита и функция просчитывает в em*/
+
+@function fontSize($looking-for) {
+    @return $looking-for / $mainFontSize#{em};
+}
+
+@function max-height($font-size, $line-count, $line-height:$base-lv-value) {
+    @return ($font-size * $line-count) * $line-height
+}

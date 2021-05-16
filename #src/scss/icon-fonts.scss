@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.woff?l8lqm4') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-point-on-map:before {
+    content: "\e900";
+}
+
+.icon-arrow:before {
+    content: "\e901";
+}
+
+.icon-dir-count-of-people:before {
+    content: "\e902";
+}
+
+.icon-fb:before {
+    content: "\e903";
+}
+
+.icon-insta:before {
+    content: "\e906";
+}
+
+.icon-location-point:before {
+    content: "\e907";
+}
+
+.icon-menu-call:before {
+    content: "\e908";
+}
+
+.icon-menu-mail:before {
+    content: "\e909";
+}
+
+.icon-on-bus:before {
+    content: "\e90a";
+}
+
+.icon-on-foot:before {
+    content: "\e90b";
+}
+
+.icon-on-plane:before {
+    content: "\e90c";
+}
+
+.icon-on-velo:before {
+    content: "\e90d";
+}
+
+.icon-registr-call:before {
+    content: "\e90e";
+}
+
+.icon-registr-mail:before {
+    content: "\e90f";
+}
+
+.icon-tarif-custom:before {
+    content: "\e910";
+}
+
+.icon-vk:before {
+    content: "\e904";
+}
+
+.icon-logo-html:before {
+    content: "\e905";
+}

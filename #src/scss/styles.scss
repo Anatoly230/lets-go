@@ -1,4 +1,9 @@
-@import 'globals';
+@import '_variables';
+@import '_fonts';
+@import '_functions';
+@import 'mixins';
+@import 'templates';
+@import '_globals';
 @import 'header/header';
 @import 'main/main';
 @import 'footer/footer';

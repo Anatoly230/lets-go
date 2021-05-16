@@ -104,7 +104,20 @@ const html = () => {
         .pipe(browserSync.stream())
 }
 
-const styles = () => {
+const stylesProcess = () => {
+    return src(path.src.css)
+        .pipe(eval(preprocessor)())
+        .pipe(autoprefixer({
+            overrideBrowserslist: ['last 10 versions'],
+            grid: true
+        }))
+        .pipe(cssCommentsDel()) /*Удаление комментариев*/
+        .pipe(dest(path.build.css))
+        .pipe(dest(path.build.css))
+        .pipe(browserSync.stream())
+}
+
+const stylesFinal = () => {
     return src(path.src.css)
         .pipe(plumber())
         .pipe(sourcemap.init())
@@ -146,7 +159,7 @@ const cleanProjDir = () => {
 }
 
 const startwatch = () => {
-    watch(path.watch.css, styles).on('change', browserSync.reload)
+    watch(path.watch.css, stylesProcess)
     watch(path.watch.html, html)
     watch(path.watch.js, scripts)
     watch(path.watch.img, images)
@@ -158,7 +171,8 @@ const startwatch = () => {
 exports.cleanimg = cleanimg;
 exports.scripts = scripts;
 exports.html = html;
-exports.styles = styles;
+exports.stylesProcess = stylesProcess;
+exports.stylesFinal = stylesFinal;
 exports.browsersync = browsersync;
 exports.cleanProjDir = cleanProjDir;
-exports.default = parallel(fontcopy, cleanimg, images, html, styles, scripts, browsersync, startwatch);
+exports.default = parallel(fontcopy, cleanimg, images, html, stylesFinal, scripts, browsersync, startwatch);
